@@ -42,9 +42,9 @@
           </section>
           <div class="nc-modal-form fc">
             <span class="f500 accent-dark">Оставьте заявку</span>
-            <input type="text" class="i-text-light mt32 i240" placeholder="Ваше имя">
-            <input type="text" class="i-text-light mt8 i240" placeholder="Номер телефона">
-            <button class="accent-btn btn180 off-btn mt16 asc">Оставить заявку</button>
+            <input type="text" class="i-text-light mt32 i240" v-model="user.name" placeholder="Ваше имя">
+            <input type="text" class="i-text-light mt8 i240" v-model="user.phone" placeholder="Номер телефона">
+            <button class="accent-btn btn180 off-btn mt16 asc" @click="submitForm">Оставить заявку</button>
           </div>
         </div>
       </template>
@@ -54,6 +54,8 @@
 
 <script>
 import Modal from '../modals/Modal.vue';
+import { isStringLengthBetween } from '~/assets/validators/simple';
+import { useRuntimeConfig } from '#app';
 
 export default {
   components: { Modal },
@@ -83,7 +85,11 @@ export default {
           commerce: 'Цена договорная',
           imgpath: '/navigate-cards/3.webp'
         }
-      ]
+      ],
+      user: {
+        name: '',
+        phone: ''
+      }
     }
   },
   mounted() {
@@ -113,6 +119,48 @@ export default {
       this.activeIndex = idx;
       this.stopAutoSlide();
       this.startAutoSlide();
+    },
+    async submitForm() {
+      // Валидация
+      if (!isStringLengthBetween(this.user.name, 2, 30)) {
+        alert('Поле "Имя" должно содержать от 2 до 30 символов')
+        return
+      }
+      if (!isStringLengthBetween(this.user.phone, 6, 20)) {
+        alert('Поле "Телефон" должно содержать от 6 до 20 символов')
+        return
+      }
+
+      try {
+        const config = useRuntimeConfig()
+
+        
+        const response = await fetch(config.public.botApiUrl, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${config.public.botApiToken}`,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.user.name,
+            phone: this.user.phone
+          })
+        })
+
+        if (!response.ok) {
+          throw new Error('Ошибка сети или сервера')
+        }
+
+        alert(`Спасибо, ${this.user.name}! Ваша заявка принята.`)
+        this.showModal = false
+        this.modalData = null
+        this.user.name = ''
+        this.user.phone = ''
+      } catch (error) {
+        console.error(error)
+        alert('Произошла ошибка при отправке заявки.')
+      }
     }
   }
 }

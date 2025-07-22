@@ -5,7 +5,9 @@ export default defineNuxtConfig({
   modules: ['@nuxt/icon'],
   runtimeConfig: {
     public: {
-      apiUrl: process.env.VITE_API_URL || 'https://default-url.com'
+      apiUrl: process.env.VITE_API_URL || 'https://default-url.com',
+      botApiUrl: process.env.VITE_BOT_API_URL || '',
+      botApiToken: process.env.VITE_BOT_API_TOKEN || ''
     }
   },
   app: {

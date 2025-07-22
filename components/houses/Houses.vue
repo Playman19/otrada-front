@@ -71,9 +71,9 @@
                 </section>
                 <div class="nc-modal-form fc">
                     <span class="f500 accent-dark">Оставьте заявку</span>
-                    <input type="text" class="i-text-light mt32 i240" placeholder="Ваше имя">
-                    <input type="text" class="i-text-light mt8 i240" placeholder="Номер телефона">
-                    <button class="accent-btn btn180 off-btn mt16 asc">Оставить заявку</button>
+                    <input type="text" class="i-text-light mt32 i240" placeholder="Ваше имя" v-model="user.name">
+                    <input type="text" class="i-text-light mt8 i240" placeholder="Номер телефона" v-model="user.phone">
+                    <button class="accent-btn btn180 off-btn mt16 asc" @click="submitForm">Оставить заявку</button>
                 </div>
             </div>
         </template>
@@ -85,6 +85,9 @@ import Items from '~/components/universal/Items.vue'
 
 import { ref } from 'vue'
 import Modal from '../modals/Modal.vue'
+
+import { isStringLengthBetween } from '~/assets/validators/simple'
+import { useRuntimeConfig } from '#app';
 
 
 export default {
@@ -110,6 +113,10 @@ export default {
             : this.data.main_img_url,
             showModal: ref(false),
             modalData: ref(null),
+            user: {
+              name: '',
+              phone: ''
+            }
         }
     },
     methods: {
@@ -127,7 +134,50 @@ export default {
         closeModal() {
           this.showModal = false
           this.modalData = null
+        },
+        async submitForm() {
+          // Валидация
+          if (!isStringLengthBetween(this.user.name, 2, 30)) {
+            alert('Поле "Имя" должно содержать от 2 до 30 символов')
+            return
+          }
+          if (!isStringLengthBetween(this.user.phone, 6, 20)) {
+            alert('Поле "Телефон" должно содержать от 6 до 20 символов')
+            return
+          }
+
+          try {
+            const config = useRuntimeConfig()
+
+
+            const response = await fetch(config.public.botApiUrl, {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${config.public.botApiToken}`,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                name: this.user.name,
+                phone: this.user.phone
+              })
+            })
+
+            if (!response.ok) {
+              throw new Error('Ошибка сети или сервера')
+            }
+
+            alert(`Спасибо, ${this.user.name}! Ваша заявка принята.`)
+            this.showModal = false
+            this.modalData = null
+            this.user.name = ''
+            this.user.phone = ''
+          } catch (error) {
+            console.error(error)
+            alert('Произошла ошибка при отправке заявки.')
+          }
         }
+
     },
     components: {
         Items,
@@ -244,6 +294,9 @@ export default {
     @media(min-width:760px) {
         .second-hand {
             display: none;
+        }
+        .nc-modal-form {
+            margin-left: 32px;
         }
     }
     @media(max-width:759px) {

@@ -107,20 +107,49 @@
 
 <script setup>
 import { reactive } from 'vue'
-import contacts from '~/config/contacts.js'
+import { useRuntimeConfig } from '#app'
+import contacts from '~/config/contacts'
+import { isStringLengthBetween } from '~/assets/validators/simple'
 
 const form = reactive({
   name: '',
   phone: ''
 })
 
-const submitForm = () => {
-  // Здесь добавь логику отправки формы, например, через fetch или axios
-  alert(`Спасибо, ${form.name}! Ваша заявка принята.`)
-  form.name = ''
-  form.phone = ''
+const config = useRuntimeConfig()
+
+const submitForm = async () => {
+    // Проверяем длину name, например от 2 до 30 символов
+  if (!isStringLengthBetween(form.name, 2, 30)) {
+    alert('Поле "Имя" должно содержать от 2 до 30 символов')
+    return
+  }
+  if (!isStringLengthBetween(form.phone, 6, 20)) {
+    alert('Поле "Телефон" должно содержать от 6 до 20 символов')
+    return
+  }
+  try {
+    await $fetch(config.public.botApiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${config.public.botApiToken}`,
+        Accept: 'application/json'
+      },
+      body: {
+        name: form.name,
+        phone: form.phone
+      }
+    })
+    alert(`Спасибо, ${form.name}! Ваша заявка принята.`)
+    form.name = ''
+    form.phone = ''
+  } catch (error) {
+    console.error('Ошибка отправки заявки:', error)
+    alert('Произошла ошибка при отправке заявки.')
+  }
 }
 </script>
+
 
 <style>
 .slider1 {
@@ -170,11 +199,11 @@ const submitForm = () => {
     }
     .logo-for-banner-lines-left {
         margin-right: -32px;
-        margin-top: 22px;
+        margin-top: 25px;
     }
     .logo-for-banner-lines-right {
         margin-left: -32px;
-        margin-top: 22px;
+        margin-top: 25px;
     }
     .slider1_bg1 {
         background-size: 100vw;
