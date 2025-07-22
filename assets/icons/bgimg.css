@@ -1,0 +1,33 @@
+.yandex-icon {
+    background-image: url('yandex.svg');
+}
+.google-icon {
+    background-image: url('google.svg');
+}
+.gis2-icon {
+    background-image: url('2gis.svg');
+}
+.phone-white-icon {
+    background-image: url('old-phone-white.svg');
+}
+.tg-white-icon {
+    background-image: url('tg-white.png');
+}
+.wa-white-icon {
+    background-image: url('whatsApp-white.png');
+}
+.location-white-icon {
+    background-image: url('white-location.png');
+}
+.arrow {
+    background-image: url('arrow.svg');
+}
+.tax-white-icon {
+    background-image: url('tax.svg');
+}
+.email-white-icon {
+    background-image: url('email.svg');
+}
+.copyright-white-icon {
+    background-image: url('copyright.svg');
+}

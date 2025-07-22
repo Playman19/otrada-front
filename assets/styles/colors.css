@@ -1,0 +1,44 @@
+:root {
+    --accent: #0a5a5a;
+    --accent-blur: #0a5a5abb;
+    --accent-blue-lightest: #18a1b2;
+    --accent-blue-light: #0796a6;
+    --accent-dark: #04574b;
+    --accent-green-light: #0b8e7e;
+    --accent-green: #0a5a17;
+    --alternate: #D1C298;
+    --alternate-dark: #8b6701;
+    --alternate-light: #ffedd6;
+    --white: #FFFFFF;
+    --dark-font: #001411;
+    --grey: #3e5a56;
+
+}
+.accent { color: var(--accent ); }
+.accent-blue-lightest { color: var(--accent-blue-lightest ); }
+.accent-blue-light { color: var(--accent-blue-light ); }
+.accent-dark { color: var(--accent-dark ); }
+.accent-green-light { color: var(--accent-green-light ); }
+.alternate { color: var(--alternate ); }
+.alternate-light { color: var(--alternate-light ); }
+.white { color: var(--white ); }
+.transparent {color: transparent;}
+.alternate-dark {
+    color: var(--alternate-dark);
+}
+.dark-font {
+    color: var(--dark-font);
+}
+.grey {
+    color: var(--grey);
+}
+
+.hover-accent:hover { color: var(--accent ); }
+.hover-accent-blue-lightest:hover { color: var(--accent-blue-lightest ); }
+.hover-accent-blue-light:hover { color: var(--accent-blue-light ); }
+.hover-accent-dark:hover { color: var(--accent-dark ); }
+.hover-accent-green-light:hover { color: var(--accent-green-light ); }
+.hover-alternate:hover { color: var(--alternate ); }
+.hover-alternate-light:hover { color: var(--alternate-light ); }
+.hover-white:hover { color: var(--white ); }
+.hover-transparent:hover {color: transparent;}

@@ -1,0 +1,21 @@
+
+@import url('buttons.css');
+@import url('colors.css');
+@import url('display.css');
+@import url('icons.css');
+@import url('inputs.css');
+@import url('layouts.css');
+@import url('text.css');
+@import url('../icons/bgimg.css');
+@import url('mobile-menu.css');
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+@keyframes ani-opacity {
+    0% {
+        opacity: 0;
+    }
+}

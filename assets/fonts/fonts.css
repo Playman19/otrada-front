@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Segoe UI'; /* Название шрифта */
+    src: url('fonts/Segoe UI.ttf') format('truetype'); /* Оригинальный */
+    font-weight: normal; /* Нормальный вес */
+    font-style: normal; /* Нормальный стиль */
+}
+
+@font-face {
+    font-family: 'Segoe UI'; /* Название шрифта */
+    src: url('fonts/Segoe UI Bold.ttf') format('truetype'); /* Жирный */
+    font-weight: bold; /* Жирный вес */
+    font-style: normal; /* Нормальный стиль */
+}
+
+@font-face {
+    font-family: 'Segoe UI'; /* Название шрифта */
+    src: url('fonts/Segoe UI Italic.ttf') format('truetype'); /* Курсив */
+    font-weight: normal; /* Нормальный вес */
+    font-style: italic; /* Курсивный стиль */
+}
+
+@font-face {
+    font-family: 'Segoe UI'; /* Название шрифта */
+    src: url('fonts/Segoe UI Bold Italic.ttf') format('truetype'); /* Жирный курсив */
+    font-weight: bold; /* Жирный вес */
+    font-style: italic; /* Курсивный стиль */
+}

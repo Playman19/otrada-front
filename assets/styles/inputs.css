@@ -1,0 +1,118 @@
+.i72 {
+    width: 72px;
+}
+.i120 {
+  width: 120px;
+}
+.i160 {
+    width: 160px;
+}
+.i180 {
+    width: 180px;
+}
+.i210 {
+    width: 210px;
+}
+.i240 {
+    width: 240px;
+}
+.i280 {
+    width: 280px;
+}
+.i320 {
+    width: 320px;
+}
+.i-text {
+    border-radius: 3px;
+    background-color: var(--white);
+    border: 2px solid white;
+    text-indent: 8px;
+    padding: 6px 0;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+.i-text:focus {
+    border: 2px solid var(--accent);
+}
+.i-text-light {
+  background-color: var(--alternate-light);
+  border-radius: 3px;
+  text-indent: 8px;
+  padding: 6px 0;
+  outline: none;
+  transition: all .2s ease-in-out;
+  border: 2px solid var(--alternate-light);
+}
+.i-text-light:focus {
+  border: 2px solid var(--accent);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.switch input {display:none;}
+
+.slider-c {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider-c:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input[type="checkbox"]:checked + .slider-c {
+  background-color: var(--accent-alternate);
+}
+input[type="checkbox"]:focus + .slider-c {
+  box-shadow: 0 0 1px var(--accent-alternate);
+}
+input[type="checkbox"]:checked + .slider-c:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+.slider-c.round {
+  border-radius: 24px;
+}
+.slider-c.round:before {
+  border-radius: 50%;
+}
+.input-dd-parent {
+    border: none;
+    outline: none;
+    background-color: var(--accent-hover);
+    color: var(--white);
+    padding: 8px 0;
+}
+.input-dd {
+    background-color: var(--font);
+    border-radius: 3px;
+}
+.input-dd > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--bg-light);
+    transition: all .2s ease-in-out;
+}
+.input-dd > button:hover {
+    background-color: var(--grey-font);
+}

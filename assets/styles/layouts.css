@@ -1,0 +1,26 @@
+.cont-ly,.big-ly {
+    margin-inline: auto;
+}
+@media(min-width:1400px) {
+    .big-ly {
+        width: 1380px;
+    }
+    .cont-ly {
+        width: 1180px;
+    }
+}
+@media(min-width:1200px) and (max-width:1399px) {
+    .cont-ly,.big-ly {
+        width: 1180px;
+    }
+}
+@media(min-width:760px) and (max-width:1199px) {
+    .cont-ly,.big-ly {
+        width: 720px;
+    }
+}
+@media(max-width:759px) {
+    .cont-ly,.big-ly {
+        width: 92%;
+    }
+}

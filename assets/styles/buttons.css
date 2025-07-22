@@ -1,0 +1,78 @@
+button {
+    cursor: pointer;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+.pr {
+    cursor: pointer;
+}
+.btn120 {
+    width: 120px;
+}
+.btn160 {
+    width: 160px;
+}
+.btn180 {
+    width: 180px;
+}
+.btn220 {
+    width: 220px;
+}
+.off-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.accent-btn {
+    color: var(--white);
+    background-color: var(--accent);
+}
+.alternate-btn {
+    background-color: var(--alternate);
+    color: var(--white);
+}
+.accent-blue-light-btn {
+    background-color: var(--accent-blue-light);
+    color: var(--white);
+}
+.accent-green-btn {
+    background-color: var(--accent-green);
+    color: var(--white);
+}
+.accent-btn,.accent-blue-light-btn, .alternate-btn, .accent-green-btn {
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+@media(min-width:759px) {
+    .accent-btn,.accent-blue-light-btn, .alternate-btn, .accent-green-btn {
+        padding: 10px 0;
+    }
+    .accent-btn:hover {
+        background-color: var(--accent-blue-light);
+    }
+    .accent-blue-light-btn:hover {
+        background-color: var(--accent-blue-lightest);
+    }
+    .alternate-btn:hover {
+        background-color: var(--alternate-light);
+        color: var(--accent);
+    }
+    .accent-green-btn:hover {
+        background-color: var(--accent-green-light);
+    }
+}
+@media(max-width:759px) {
+    .accent-btn,.accent-blue-light-btn, .alternate-btn, .accent-green-btn {
+        padding: 8px 0;
+    }
+}

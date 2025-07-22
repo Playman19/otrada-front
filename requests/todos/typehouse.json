@@ -1,0 +1,28 @@
+{
+  "main_img": "/assets/imgs/items/1.webp",
+  "title": "Дом 115.7 м2 на участке 9 соток",
+  "price": 6950000,
+  "location": "Отрадное",
+  "modificator": "active",
+  "carousell_imgs": [
+    "/assets/imgs/items/1.webp",
+    "/assets/imgs/items/2.webp",
+    "/assets/imgs/items/3.webp",
+    "/assets/imgs/items/4.webp",
+    "/assets/imgs/items/3.webp",
+    "/assets/imgs/items/2.webp",
+    "/assets/imgs/items/1.webp",
+    "/assets/imgs/items/4.webp"
+
+  ],
+  "description": "В продаже частный дом 115.7 м2 на участке 9 соток, электричество, вода, газ есть, хорошие соседи",
+  "area_house": "115.7 м2",
+  "area_land": "9 соток",
+  "electricity": "есть",
+  "water": "скважина",
+  "year": "2025",
+  "land_type": "ИЖС",
+  "floors_count": "1",
+  "adress": "Брянский р-н, ул. Отрадная",
+  "map": "<iframe src=\"https://yandex.ru/map-widget/v1/?um=constructor%3A96bb90d6c3ca893e770f914021a75a46708f930c0f1bae13550c075181f06f71&amp;source=constructor\" width=\"800\" height=\"600\" frameborder=\"0\"></iframe>"
+}

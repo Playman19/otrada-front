@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "main_img": "/assets/imgs/items/1.webp",
+    "title": "Уютный загородный дом",
+    "price": 7500000,
+    "location": "Подмосковье, Одинцовский район",
+    "category": "1",
+    "carousell_imgs": [
+      "/assets/imgs/items/2.webp",
+      "/assets/imgs/items/3.webp"
+    ],
+    "description": "Прекрасный дом с большим участком, идеально подходит для семьи.",
+    "area_house": "150 м²",
+    "area_land": "12 соток",
+    "electricity": "Подключено",
+    "water": "Скважина",
+    "year": "2018",
+    "land_type": "ИЖС",
+    "floors_count": "2",
+    "adress": "Московская область, д. Лесная, ул. Центральная, 15",
+    "map": "<iframe src=\"https://maps.example.com/embed?house1\" width=\"600\" height=\"450\"></iframe>"
+  },
+  {
+    "id": "2",
+    "main_img": "/assets/imgs/items/2.webp",
+    "title": "Современный коттедж у озера",
+    "price": 12500000,
+    "location": "Выборгский район",
+    "category": "0",
+    "carousell_imgs": [
+      "/assets/imgs/items/3.webp",
+      "/assets/imgs/items/4.webp"
+    ],
+    "description": "Элегантный коттедж с видом на озеро и собственным причалом.",
+    "area_house": "220 м²",
+    "area_land": "18 соток",
+    "electricity": "Подключено",
+    "water": "Центральное водоснабжение",
+    "year": "2021",
+    "land_type": "Садоводство",
+    "floors_count": "3",
+    "adress": "пос. Озерный, ул. Приозерная, 7",
+    "map": "<iframe src=\"https://maps.example.com/embed?house2\" width=\"600\" height=\"450\"></iframe>"
+  }
+]
