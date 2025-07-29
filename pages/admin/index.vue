@@ -19,11 +19,11 @@
         <HousesList v-if="mode === 'list'" />
         <HouseData v-if="mode === 'add'" @set-mode-list-emit="setModeList"/>
         <div class="admin-navigate-btns" >
-            <button @click="this.mode = 'list'" :class="{'admin-navigation-active-btns': mode === 'list'}">
+            <button @click="mode = 'list'" :class="{'admin-navigation-active-btns': mode === 'list'}">
                 <Icon name="gg:list" class="s24 white" />
                 <span class="white ml4">Список домов</span>
             </button>
-            <button @click="this.mode = 'add'" class="mt6" :class="{'admin-navigation-active-btns': mode === 'add'}">
+            <button @click="mode = 'add'" class="mt6" :class="{'admin-navigation-active-btns': mode === 'add'}">
                 <Icon name="lucide:house-plus" class="s24 white" />
                 <span class="white ml4">Добавить дом</span>
             </button>
