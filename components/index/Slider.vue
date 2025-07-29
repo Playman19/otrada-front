@@ -79,7 +79,7 @@
             name="phone"
             id="phone"
             placeholder="Номер телефона"
-            minlength="18"
+            minlength="6"
             maxlength="18"
             required
           />
@@ -199,11 +199,11 @@ const submitForm = async () => {
     }
     .logo-for-banner-lines-left {
         margin-right: -32px;
-        margin-top: 25px;
+        margin-top: 22px;
     }
     .logo-for-banner-lines-right {
         margin-left: -32px;
-        margin-top: 25px;
+        margin-top: 22px;
     }
     .slider1_bg1 {
         background-size: 100vw;
