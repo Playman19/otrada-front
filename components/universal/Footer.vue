@@ -43,11 +43,11 @@
         <div class="fc white rekvizits">
           <div class="flex">
             <aside class="bgimg icon-min tax-white-icon"></aside>
-            <span class="ml4">ИНН 321234567890</span>
+            <span class="ml4">ИНН 32 1000025978</span>
           </div>
           <div class="flex">
             <aside class="bgimg icon-min tax-white-icon"></aside>
-            <span class="ml4">ОГРН 321234567890123</span>
+            <span class="ml4">ОГРН 304324314900137</span>
           </div>
           <div class="flex" @click="checkAuth">
             <aside class="bgimg icon-min copyright-white-icon"></aside>
