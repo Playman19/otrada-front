@@ -29,6 +29,8 @@ const { data: houses, pending, error } = await getHouses()
             </NuxtLink>
         </nav>
     </section>
+    <div v-else class="mt32">
+    </div>
 </template>
 
 <style scoped>
