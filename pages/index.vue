@@ -1,29 +1,33 @@
 <template>
   <div>
-    <Slider />
-    <main>
-        <VisitkaDark />
-        <!-- <NavigateCards /> -->
-        <InfoBlock  :article="contentData.seo_articles[0]"/>
-        <Categories />
-        <h2 class="big-ly accent f500 tc fs32-21">Жилые дома</h2>
+    <Utp />
+    <main class="fc index-main">
+        <Rest />
+        <Bonuses />
+        <IndexMapSchema />
+        <Advantages />
+        <Offers />
         <Items />
-        <InfoBlock  :article="contentData.seo_articles[1]"/>
+        <Ask />
+        <FAQ />
     </main>
     <Footer />
   </div>
 </template>
 
 <script>
-import InfoBlock from '~/components/universal/InfoBlock.vue';
-import Footer from '~/components/universal/Footer.vue';
-import Items from '~/components/universal/Items.vue';
-import VisitkaDark from '~/components/index/VisitkaDark.vue';
-import Slider from '~/components/index/Slider.vue';
-// import NavigateCards from '~/components/index/NavigateCards.vue';
-
 import contentData from '~/config/content'
-import Categories from '~/components/index/Categories.vue';
+import Utp from '~/components/v2/index/Utp.vue'
+import Rest from '~/components/v2/index/Rest.vue'
+import Bonuses from '~/components/v2/index/Bonuses.vue'
+import IndexMapSchema from '~/components/v2/index/IndexMapSchema.vue'
+import Advantages from '~/components/v2/index/Advantages.vue'
+import Offers from '~/components/v2/index/Offers.vue'
+import Items from '~/components/v2/index/Items.vue'
+import Ask from '~/components/v2/index/Ask.vue'
+import FAQ from '~/components/v2/index/FAQ.vue'
+import Footer from '~/components/v2/universal/Footer.vue'
+
 
 export default {
   setup() {
@@ -39,128 +43,15 @@ export default {
     }
   },
   components: {
-    Footer,
-    InfoBlock,
-    Items,
-    VisitkaDark,
-    Slider,
-    // NavigateCards,
-    Categories
+    Utp, Rest, Bonuses, IndexMapSchema, Advantages, Offers, Items, Ask, FAQ, Footer
   }
 }
 </script>
 
-<style>
-.ic-btn {
-    position: absolute;
-}
-.items-card {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.items-ly {
-    flex-wrap: wrap;
-}
-.items-card > article {
-    justify-self: end;
-}
-@media(min-width:1400px) {
-    .items-card > img {
-        width: 317px;
-        height: 238px;
+<style scoped>
+    .index-main {
+        background-color: var(--bg);
+        padding-top: 40px;
+        padding-bottom: 90px;
     }
-}
-@media(min-width:1200px) and (max-width:1399px) {
-    .items-card > img {
-        width: 271px;
-        height: 203px;
-    }
-}
-@media(min-width:760px) and (max-width:1199px) {
-    .items-card > img {
-        width: 216px;
-        height: 162px;
-    }
-}
-@media(max-width:759px) {
-    .items-card > img {
-        width: 100%;
-        aspect-ratio: 4/3;
-    }
-}
-@media(min-width:1200px) {
-    .items-ly {
-        padding: 42px 0;
-        gap: 12px;
-    }
-    .items-card {
-        padding: 12px 8px;
-        transition: all .2s ease-in-out;
-        flex: 0 23%;
-        height: 380px;
-        border-radius: 4px;
-    }
-    .items-card:hover {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 14px;
-    }
-}
-@media(min-width:760px) and (max-width:1199px) {
-    .items-ly {
-        padding: 36px 0;
-        gap: 8px;
-    }
-    .items-card {
-        padding: 10px 6px;
-        flex: 0 30%;
-        height: 360px;
-        border-radius: 3px;
-    }
-}
-@media(min-width:760px) {
-    .ic-btn {
-        right: 4px;
-        bottom: 6px;
-    }
-}
-@media(max-width:759px) {
-    .items-ly {
-        padding: 24px 0;
-        gap: 4px;
-    }
-    .items-card {
-        padding: 10px 6px;
-        flex: 0 45%;
-        
-        border-radius: 3px;
-    }
-    .items-card > article {
-        font-size: 12px;
-    }
-    .items-card > h3 {
-        font-size: 16px;
-    }
-    .items-card > span {
-        font-size: 14px;
-    }
-    .ic-btn {
-        right: 4px;
-        bottom: 22px;
-        width: 24px;
-        height: 24px;
-    }
-}
-@media(max-width:400px) {
-    .items-card {
-        height: 240px;
-    }
-}
-@media(min-width:401px) and (max-width:759px) {
-    .items-card {
-        height: 280px;
-    }
-}
 </style>

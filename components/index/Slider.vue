@@ -151,7 +151,7 @@ const submitForm = async () => {
 </script>
 
 
-<style>
+<style scoped>
 .slider1 {
     position: relative;
     overflow: hidden;

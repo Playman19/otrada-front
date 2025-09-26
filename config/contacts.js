@@ -29,5 +29,10 @@ export default {
     aria: 'Построить маршрут до офиса продаж Коттеджного посёлка Отрада',
     inner_html: 'c. Отрадное, ул. Отрадная 1/3',
     link: 'https://yandex.ru/maps/-/CHHleC6W'
+  },
+  vk: {
+    aria: 'Перейти в сообщество ВК КП Отрада',
+    inner_html: 'КП "ОТРАДА"',
+    link: 'https://vk.com/club228361956'
   }
 }

@@ -4,6 +4,9 @@ html, body {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+.grey-line {
+    border-top: 1px solid var(--grey-3);
+}
 .cp {
     cursor: pointer;
 }
@@ -52,13 +55,47 @@ html, body {
 .asc {
     align-self: center;
 }
+.asc {
+    align-self: end;
+}
+.jce {
+    justify-content: end;
+}
 @media(max-width:1199px) {
     .flexadapt-tab {
         flex-direction: column;
+    }
+}
+@media(min-width:760px) {
+    .desktop-none {
+        display: none;
     }
 }
 @media(max-width:759px) {
     .flexadapt {
         flex-direction: column;
     }
+    .mobile-none {
+        display: none;
+    }
+    .mob-gap-6 {
+        gap: 6px;
+    }
+    .flex-mob-col {
+        flex-direction: column;
+    }
+    .mob-ais {
+        align-items: start;
+    }
 }
+/* Анимация спуска вниз */
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

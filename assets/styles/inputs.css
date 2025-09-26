@@ -22,6 +22,28 @@
 .i320 {
     width: 320px;
 }
+.i-text-3 {
+  background-color: white;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 4px 12px;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+.i-text-3:focus {
+    border: 2px solid var(--accent);
+}
+.i-text-2 {
+  background-color: #F2F3ED;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 4px 12px;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+.i-text-2:focus {
+    border: 2px solid var(--accent);
+}
 .i-text {
     border-radius: 3px;
     background-color: var(--white);

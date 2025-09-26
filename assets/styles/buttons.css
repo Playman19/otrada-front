@@ -13,6 +13,9 @@ button {
 .pr {
     cursor: pointer;
 }
+.relative {
+    position: relative;
+}
 .btn120 {
     width: 120px;
 }
@@ -30,6 +33,14 @@ button {
     border: none;
     background-color: transparent;
 }
+.accent-gradient-btn {
+    color: white;
+    background: linear-gradient(97.29deg, #0A5A5A 56.19%, #15C0C0 157.43%);
+    font-weight: 400 !important;
+}
+.accent-gradient-btn:hover {
+    background: linear-gradient(97.29deg, #0A5A5A 20.19%, #15C0C0 157.43%);
+}
 .accent-btn {
     color: var(--white);
     background-color: var(--accent);
@@ -46,7 +57,7 @@ button {
     background-color: var(--accent-green);
     color: var(--white);
 }
-.accent-btn,.accent-blue-light-btn, .alternate-btn, .accent-green-btn {
+.accent-btn,.accent-blue-light-btn, .alternate-btn, .accent-green-btn, .accent-gradient-btn {
     border-radius: 4px;
     transition: all .2s ease-in-out;
     font-weight: 500;

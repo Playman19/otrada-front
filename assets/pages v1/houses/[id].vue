@@ -1,11 +1,9 @@
 <script setup>
-import Header2 from '~/components/v2/houses/Header2.vue';
-import Houses2 from '~/components/v2/houses/Houses2.vue';
-
 import houses from '../../requests/todos/example.json'
 import { useRoute } from 'vue-router'
+import VisitkaDark from '~/components/index/VisitkaDark.vue';
+import Footer from '~/components/universal/Footer.vue';
 import Houses from '~/components/houses/Houses.vue';
-import Footer from '~/components/v2/universal/Footer.vue';
 import { useHead } from '#app';
 
 import { useApi } from '~/composables/general.js'
@@ -37,24 +35,23 @@ useHead({
 <script>
 export default {
   components: {
+    VisitkaDark,
     Footer,
-    Houses,
-    Header2,
-    Houses2
+    Houses
   }
 }
 </script>
 
 <template>
-  <Header2 />
-    <main class="main-id">
-      <Houses2 :data="data.data" />
+  <header>
+    <VisitkaDark />
+  </header>
+    <main>
+      <Houses :data="data.data" />
     </main>
     <Footer />
 </template>
 
-<style scoped>
-  .main-id {
-    background-color: var(--bg);
-  }
+<style>
+  
 </style>

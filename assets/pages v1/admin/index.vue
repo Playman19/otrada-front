@@ -1,5 +1,5 @@
 <template>
-    <div class="visitka-dark admin-header">
+    <div class="visitka-dark">
         <section class="visitka-dark-container cont-ly flexadapt sb">
             <NuxtLink to="/" class="vd-img-cont">
               <img
@@ -44,13 +44,11 @@
 import HousesList from '~/components/admin/HousesList.vue'
 import HouseData from '~/components/admin/HouseData.vue'
 import { useAuth } from '~/composables/auth.js'
-import { Icon } from '#components';
 
 export default {
     components: {
         HousesList,
-        HouseData,
-        Icon
+        HouseData
     },
     data() {
         return {
@@ -77,9 +75,6 @@ export default {
 }
 </script>
 <style>
-    .admin-header {
-        background-color: var(--accent);
-    }
     .admin-ly {
         background-image: url('../../assets/admin-bg.webp');
         background-size: cover;

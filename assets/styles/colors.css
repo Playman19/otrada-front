@@ -12,6 +12,8 @@
     --white: #FFFFFF;
     --dark-font: #001411;
     --grey: #3e5a56;
+    --bg: #f2f3ed;
+    --accent-grey: #c4d4d0;
 
 }
 .accent { color: var(--accent ); }
